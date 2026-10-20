@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #e2e1e1;
+  --foreground: #03012b;
+  --primary: #093be0;
+  --secondary: #efba0b;
+  --text: #03003c;
+  --muted: rgba(128, 128, 128, 0.625);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-darkPrimary: var(--text);
+  --color-muted: var(--muted);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--background);
+
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+
+  /* text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; */
+}
+* {
+  box-sizing: border-box;
+}
+
+div.background {
+  position: fixed;
+  inset: 0;
+  opacity: 0.5;
+}
+
+a,
+button {
+  transition-property:
+    color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+::selection {
+  background: rgb(212 175 55 / 0.22);
+  color: var(--foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+article {
+  color: #e0ae09;
+}
+.bg-watery {
+  position: relative;
+  background: linear-gradient(
+    to bottom left,
+    #c9d6fd89 0%,
+    #ffffff35 18%,
+    #ffffff12 45%,
+    #90a5e817 60%,
+    #7e96e523 75%,
+    #6a86e134 100%
+  );
+
+  border: 1px solid #ffffff7d;
+  border-top: 1px solid #ffffff70;
+  border-bottom: 1px solid #ffffff5d;
+
+  box-shadow:
+    inset 0 1px 1px #ffffff50,
+    inset 0 -1px 1px #ffffff15,
+    0 8px 32px #00000015,
+    0 5px 40px #093be055;
+
+  overflow: hidden;
+
+  /* will-change: backdrop-filter;
+    transform: translateZ(0); */
+}
+
+.bg-watery::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  z-index: -1;
+  background-color: #ffffff46;
+  backdrop-filter: blur(8px);
+}
