@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 
 type ButtonLinkProps = HTMLMotionProps<"a"> & {
   children: ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "none";
   size?: "sm" | "md";
 };
 
@@ -17,16 +17,18 @@ const sizeClasses = {
 
 const variantClasses = {
   primary:
-    "border border-transparent bg-secondary text-[#0B1C2C] shadow-[0_18px_40px_-20px_rgba(212,175,55,0.8)] hover:bg-[#c6a12c] focus-visible:ring-[#D4AF37]/40",
+    "button-gradient-primary border border-white/70 text-white shadow-[0_18px_40px_-20px_rgba(9,59,224,0.65)] hover:brightness-110 focus-visible:ring-primary/30",
   secondary:
-    "border-secondary border border-secondary text-darkPrimary shadow-[0_20px_40px_-28px_rgba(11,28,44,0.35)] hover:border-[#0B1C2C]/20 hover:bg-secondary focus-visible:ring-[#0B1C2C]/15",
+    "button-gradient-secondary border border-white text-darkPrimary shadow-[0_18px_40px_-24px_rgba(239,186,11,0.75)] hover:brightness-105 focus-visible:ring-secondary/30",
+  none:
+    "border border-white text-darkPrimary font-semibold shadow-[0_18px_40px_-20px_rgba(9,59,224,0.65)] hover:brightness-110 focus-visible:ring-primary/30",
 };
 
 export function ButtonLink({
   children,
   className = "",
   size = "md",
-  variant = "primary",
+  variant = "none",
   ...props
 }: ButtonLinkProps) {
   return (
@@ -34,7 +36,7 @@ export function ButtonLink({
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}
       className={[
-        "inline-flex items-center justify-center gap-2 rounded-md font-semibold tracking-tight outline-none focus-visible:ring-4",
+        "inline-flex items-center justify-center gap-2 shadow-watery rounded-full font-semibold tracking-tight outline-none focus-visible:ring-4",
         sizeClasses[size],
         variantClasses[variant],
         className,

@@ -34,13 +34,12 @@ export function HeroSection() {
     }
     return "light";
   });
-  const src = "/light-profile.png";
 
   return (
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden pb-12 pt-8 lg:pt-12"
+      className="relative overflow-hidden pb-12 pt-26 lg:pt-32"
     >
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.18),transparent_38%),radial-gradient(circle_at_top_right,rgba(11,28,44,0.06),transparent_42%)]" />
       <div className="mx-auto grid max-w-7xl px-6 md:px-12 lg:grid-cols-2 lg:items-center lg:px-20">
@@ -51,17 +50,6 @@ export function HeroSection() {
           className="flex max-w-2xl flex-col items-start gap-5"
         >
           <div className="space-y-5 py-0">
-            <motion.h1
-              id="hero-title"
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...revealTransition, delay: 0.1 }}
-              className="font-display text-balance text-[clamp(3rem,7vw,6rem)] font-semibold uppercase leading-[0.9] px-0 tracking-tight"
-            >
-              <span className="block text-darkPrimary">Ibanze</span>
-              <span className="block text-secondary">Miracle</span>
-            </motion.h1>
-            <hr className="bg-secondary w-12 h-1 rounded-md border-0 -mt-3" />
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,6 +58,17 @@ export function HeroSection() {
             >
               Full-Stack Developer
             </motion.p>
+            <motion.h1
+              id="hero-title"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...revealTransition, delay: 0.1 }}
+              className="font-display text-balance  font-semibold uppercase leading-[0.9] px-0 tracking-tight text-darkPrimary"
+            >
+              <span className="block font">Hi, I'm</span>
+              <span className="block text-[clamp(3rem,7vw,6rem)]">IBANZE <span className="text-secondary">Miracle</span></span>
+            </motion.h1>
+            <hr className="bg-secondary w-12 h-1 rounded-md border-0 -mt-3" />
 
             <motion.p
               initial={{ opacity: 0, y: 18 }}
@@ -88,14 +87,13 @@ export function HeroSection() {
             transition={{ ...revealTransition, delay: 0.24 }}
             className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row"
           >
-            <ButtonLink href="#projects">
+            <ButtonLink href="#projects" variant="primary" >
               View Projects
               <ArrowRight className="size-4" />
             </ButtonLink>
 
             <ButtonLink
               href="/IBANZE_Miracle_Resume.pdf"
-              variant="secondary"
               download
             >
               Download CV
@@ -140,10 +138,10 @@ export function HeroSection() {
             transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
             className="relative overflow-hidden rounded-[2rem] w-full"
           >
-            {/* <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.22),transparent_72%)]" /> */}
+            <div className="hero-image-glow -z-1 tranlate-y-32" />
             <>
               <Image
-                src="/light-profile.png"
+                src="/profile.png"
                 alt="Portrait of Ibanze Miracle"
                 width={1600}
                 height={1600}

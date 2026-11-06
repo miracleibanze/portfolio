@@ -15,6 +15,7 @@ export function PageShell({ children }: PageShellProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.45, ease: smoothEase }}
+      className="relative z-10"
     >
       {children}
     </motion.div>

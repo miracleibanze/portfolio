@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-4 right-0 left-0 z-100 w-full max-w-5xl mx-auto m-3 px-4  font-bold">
+      <header className="fixed top-4 right-0 left-0 z-100 w-full max-w-6xl mx-auto m-3 px-4  font-bold">
         <nav className="w-full bg-watery py-4 px-6 md:px-12 flex items-center justify-between text-darkPrimary rounded-full">
           <h3 className="text-2xl font-bold tracking-wide">
             Mi<span className="text-secondary">rac</span>le.

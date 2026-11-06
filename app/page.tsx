@@ -11,7 +11,7 @@ export default function Home() {
     <PageShell>
       <div className="relative min-h-screen overflow-x-hidden">
         <Navbar />
-        <main className="pt-16">
+        <main>
           <HeroSection />
           {Hr}
           {/* <Footer /> */}
