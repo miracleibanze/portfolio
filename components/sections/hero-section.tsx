@@ -41,7 +41,7 @@ export function HeroSection() {
       aria-labelledby="hero-title"
       className="relative overflow-hidden pb-12 pt-26 lg:pt-32"
     >
-      <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.18),transparent_38%),radial-gradient(circle_at_top_right,rgba(11,28,44,0.06),transparent_42%)]" />
+      {/* <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.18),transparent_38%),radial-gradient(circle_at_top_right,rgba(11,28,44,0.06),transparent_42%)]" /> */}
       <div className="mx-auto grid max-w-7xl px-6 md:px-12 lg:grid-cols-2 lg:items-center lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -49,7 +49,7 @@ export function HeroSection() {
           transition={revealTransition}
           className="flex max-w-2xl flex-col items-start gap-5"
         >
-          <div className="space-y-5 py-0">
+          <div className="space-y-5 py-0 pt-8">
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -65,8 +65,12 @@ export function HeroSection() {
               transition={{ ...revealTransition, delay: 0.1 }}
               className="font-display text-balance  font-semibold uppercase leading-[0.9] px-0 tracking-tight text-darkPrimary"
             >
-              <span className="block font">Hi, I'm</span>
-              <span className="block text-[clamp(3rem,7vw,6rem)]">IBANZE <span className="text-secondary">Miracle</span></span>
+              <span className="block text-[20px] font pb-3 leading-[0]">
+                Hi, I'm
+              </span>
+              <span className="block text-[clamp(3rem,7vw,6rem)]">
+                IBANZE <span className="text-secondary">Miracle</span>
+              </span>
             </motion.h1>
             <hr className="bg-secondary w-12 h-1 rounded-md border-0 -mt-3" />
 
@@ -87,15 +91,12 @@ export function HeroSection() {
             transition={{ ...revealTransition, delay: 0.24 }}
             className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row"
           >
-            <ButtonLink href="#projects" variant="primary" >
+            <ButtonLink href="#projects" variant="primary">
               View Projects
               <ArrowRight className="size-4" />
             </ButtonLink>
 
-            <ButtonLink
-              href="/IBANZE_Miracle_Resume.pdf"
-              download
-            >
+            <ButtonLink href="/IBANZE_Miracle_Resume.pdf" download>
               Download CV
               <Download className="size-4" />
             </ButtonLink>

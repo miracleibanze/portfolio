@@ -3,6 +3,7 @@ import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import background from "@/public/ttten.svg";
+import Navbar from "@/components/layout/navbar";
 
 const manrope = Manrope({
   variable: "--font-body",
@@ -57,6 +58,7 @@ export default function RootLayout({
             className="w-full h-full object-cover brightness-50"
           />
         </div>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,4 +1,3 @@
-import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { PageShell } from "@/components/ui/page-shell";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <PageShell>
       <div className="relative min-h-screen overflow-x-hidden">
-        <Navbar />
         <main>
           <HeroSection />
           {Hr}
